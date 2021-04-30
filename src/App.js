@@ -1,8 +1,6 @@
 import React from 'react';
-import {decorate, observable, action, computed} from 'mobx';
-import {observer} from 'mobx-react';
-
-import Counter from './components/counter'
+import useStore from './useStore'
+import Counter from './components/Counter'
 
 function App() {
   return (
