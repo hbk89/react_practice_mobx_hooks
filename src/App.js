@@ -1,13 +1,14 @@
-import React from 'react';
-import useStore from './useStore'
 import Counter from './components/Counter'
+import SuperMarket from './components/SuperMarket'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div>
       <Counter/>
+      <hr/>
+      <SuperMarket/>
     </div>
-  );
+  )
 }
 
 export default App;

@@ -1,13 +1,15 @@
-import { observable } from "mobx";
+import {observable} from 'mobx'
 
 const counter = observable({
-  number: 0,
-  increase() {
+  number : 1,
+
+  increase(){
     this.number++;
   },
-  decrease() {
+
+  decrease(){
     this.number--;
-  },
-});
+  }
+})
 
 export default counter;
