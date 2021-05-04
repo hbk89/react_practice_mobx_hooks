@@ -2,11 +2,11 @@ import '../css/Item.css'
 import useStore from '../useStore'
 
 const Item = ({ name, price }) => {
-    const {basket, totalPrice} = useStore();
+    const {basket, counter, totalPrice} = useStore();
     
     const onPut = () =>{
         basket.put(name, price);
-        totalPrice.num += price;
+        totalPrice.num += counter.number*price;
     }
 
     return (

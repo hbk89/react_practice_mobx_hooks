@@ -3,11 +3,11 @@ import '../css/basket.css'
 import useStore from '../useStore'
 
 const Basket = ({name, price, count}) => {
-    const {basket, totalPrice} = useStore();
+    const {basket, counter, totalPrice} = useStore();
 
     const onTake = () =>{
         basket.take(name);
-        totalPrice.num -= price;
+        totalPrice.num -=  counter.number * price;
     }
 
     return useObserver(()=>(

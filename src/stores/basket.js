@@ -1,4 +1,5 @@
-import { observable } from 'mobx'
+import { observable } from 'mobx';
+import counter from './counter';
 
 const basket = observable({
     selectedItems: [],
@@ -9,17 +10,17 @@ const basket = observable({
             this.selectedItems.push({
                 name,
                 price,
-                count : 1,
+                count : counter.number,
             });
         }else {
-            exist.count++;
+            exist.count+=counter.number;
         }
     },
 
     take(name){
-        const item = this.selectedItems.find((a) => a.name === name);
-        item.count --;
-        if(!item.count){
+        const item = this.selectedItems.find(a => a.name === name);
+        item.count-=counter.number;
+        if(item.count <= 0){
             this.selectedItems.remove(item);
         }
     },
