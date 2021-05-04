@@ -8,7 +8,8 @@ const BasketList = () => {
     
     return useObserver(() => (
         <div>
-            {basket.selectedItem.map(item => <Basket {...item} key={item.name}/>)}
+            {basket.selectedItems.map(item => <Basket {...item} key={item.name}/>)}
+            <hr/>
         </div>
     ))
 }

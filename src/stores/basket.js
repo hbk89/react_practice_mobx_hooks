@@ -17,15 +17,11 @@ const basket = observable({
     },
 
     take(name){
-        const item = this.selectedItems.find(item => item.name === name);
+        const item = this.selectedItems.find((a) => a.name === name);
         item.count --;
         if(!item.count){
             this.selectedItems.remove(item);
         }
-    },
-    
-    get total() {
-
     },
 });
 

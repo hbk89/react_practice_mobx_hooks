@@ -1,6 +1,7 @@
 import ItemList from './ItemList'
 import BasketList from './BasketList';
 import '../css/SuperMarket.css'
+import TotalPrice from './TotalPrice';
 
 const SuperMarket = ({ items, basket }) => {
     return (
@@ -13,6 +14,7 @@ const SuperMarket = ({ items, basket }) => {
                 <h2>장바구니</h2>
                 <hr/>
                 <BasketList/>
+                <TotalPrice/>
             </div>
         </div>
     )
